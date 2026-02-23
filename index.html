@@ -23,7 +23,6 @@
     .project-meta { opacity: 0.9; margin-top: 6px; }
     .project-links a { display: inline-block; margin-right: 14px; }
     .note { opacity: 0.85; font-size: 1.05rem; }
-    .hide-if-empty { display: none; }
   </style>
 </head>
 
@@ -61,15 +60,13 @@
       </p>
 
       <p id="contact-info" class="quick-links">
-        <a href="mailto:hello@8bitfaz.com" id="email" target="_blank">hello@8bitfaz.com</a>
+        <a href="mailto:hossamfaz@gmail.com" id="email" target="_blank">hossamfaz@gmail.com</a>
         <a href="https://instagram.com/8bitfaz" target="_blank">Instagram</a>
         <a href="https://youtube.com/@8bitfaz" target="_blank">YouTube</a>
-        <!-- Optional: add TikTok / other links -->
-        <!-- <a href="https://tiktok.com/@YOURHANDLE" target="_blank">TikTok</a> -->
       </p>
 
       <div class="top-right-icons">
-        <!-- Replace the icon URLs with your own or local images in /assets -->
+        <!-- If these icon files don't exist in your repo, either add them or remove the <img> lines and keep the text -->
         <a href="https://instagram.com/8bitfaz" target="_blank" aria-label="Instagram">
           <img src="assets/icons/instagram.png" alt="Instagram" class="logo">
           <span>IG</span>
@@ -79,14 +76,6 @@
           <img src="assets/icons/youtube.png" alt="YouTube" class="logo">
           <span>YT</span>
         </a>
-
-        <!-- Optional: GitHub if you want it -->
-        <!--
-        <a href="https://github.com/YOURUSERNAME" target="_blank" aria-label="GitHub">
-          <img src="assets/icons/github.png" alt="GitHub" class="logo">
-          <span>GH</span>
-        </a>
-        -->
 
         <!-- Dark/Light toggle if your template supports it -->
         <div class="mode-switch">
@@ -117,21 +106,19 @@
         <div class="about-container">
           <div class="about-text">
             <p>
-              I’m Faz. I make playful, culture-driven work across video, illustration, and internet storytelling.
-              My thing is mixing nostalgia with modern formats, then packaging it like a tiny digital experience.
+              I’m Hossam Fazulla (Faz). I make playful, culture-driven work across video, illustration, and internet storytelling.
             </p>
             <p>
-              This site is a curated snapshot. If you want the full chaos, hit the socials.
+              This website is humble and simple for now, but I’ll keep building it. At least it’s my own space and not just a social media profile.
+              Thanks for visiting, by the way.
             </p>
-
             <p class="note">
-              Based in London. Available for collaborations, commissions, and brand work that fits the vibe.
+              Available for collaborations and brand deals, if they’re the good ones.
             </p>
           </div>
 
           <div class="about-photo">
-            <!-- Replace with your own image file, ideally stored locally -->
-            <img src="assets/profile.jpg" alt="Faz profile photo" class="profile-photo">
+            <img src="assets/8bitFaz-profile.jpg" alt="Faz profile photo" class="profile-photo">
           </div>
         </div>
       </section>
@@ -144,9 +131,7 @@
           <h3>🍱 Food I Can’t Read</h3>
           <p class="project-meta">Short-form food reviews of products with labels I can’t read. Mostly comedy, sometimes genuinely good.</p>
           <p class="project-links">
-            <a href="https://instagram.com/food.i.cant.read" target="_blank"><span class="project-link-symbol">></span> Watch on Instagram</a>
-            <!-- Optional: add a YouTube playlist link -->
-            <!-- <a href="https://youtube.com/playlist?list=XXXX" target="_blank"><span class="project-link-symbol">></span> YouTube playlist</a> -->
+            <a href="https://www.instagram.com/food.i.cant.read/" target="_blank"><span class="project-link-symbol">></span> Watch on Instagram</a>
           </p>
         </div>
 
@@ -154,7 +139,6 @@
           <h3>🕳️ Weird Things on the Internet</h3>
           <p class="project-meta">A guided tour through the internet’s attic. Strange websites, odd tools, and delightful nonsense.</p>
           <p class="project-links">
-            <!-- Replace with your actual link(s) -->
             <a href="https://instagram.com/8bitfaz" target="_blank"><span class="project-link-symbol">></span> Episodes</a>
           </p>
         </div>
@@ -163,7 +147,6 @@
           <h3>🎨 Illustration + Art</h3>
           <p class="project-meta">Commissioned illustration, editorial work, and personal pieces exploring identity, migration, and pop culture.</p>
           <p class="project-links">
-            <!-- Replace with a gallery link if you have one -->
             <a href="https://instagram.com/8bitfaz" target="_blank"><span class="project-link-symbol">></span> View work</a>
           </p>
         </div>
@@ -175,7 +158,6 @@
 
         <p class="note">Curated picks. More on YouTube / Instagram.</p>
 
-        <!-- Best practice: embed YouTube videos instead of hosting mp4 files -->
         <div class="project">
           <h3>▶️ Featured video</h3>
           <div class="project-video">
@@ -212,7 +194,7 @@
 
         <ul class="contact-list" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
           <li>
-            <a href="mailto:hello@8bitfaz.com" target="_blank">
+            <a href="mailto:hossamfaz@gmail.com" target="_blank">
               <span class="project-link-symbol">></span> Email
             </a>
           </li>
@@ -226,8 +208,6 @@
               <span class="project-link-symbol">></span> YouTube
             </a>
           </li>
-          <!-- Optional -->
-          <!-- <li><a href="https://tiktok.com/@YOURHANDLE" target="_blank"><span class="project-link-symbol">></span> TikTok</a></li> -->
         </ul>
 
         <p class="note" style="text-align:center; margin-top: 16px;">
@@ -244,7 +224,7 @@
   <!-- Your template JS -->
   <script src="js/main.js"></script>
 
-  <!-- Tiny helper: auto year (won't break anything even if JS fails) -->
+  <!-- Tiny helper: auto year -->
   <script>
     (function () {
       var el = document.getElementById('year');
