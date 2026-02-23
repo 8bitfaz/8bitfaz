@@ -1,244 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>[Your Name] - Retro Portfolio</title>
-    <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"> <!-- Corrected path for your CSS -->
-    <style>
-        .mode-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: #33ff33;
-            background: none;
-            border: none;
-            outline: none;
-        }
-    </style>
-    <style>
-        .linkedin-logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8bitfaz | Retro Portfolio</title>
+
+  <!-- Google Font (keeps the retro vibe) -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Your template CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Small safety styles so things look intentional even before you tweak CSS */
+    .top-right-icons { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .top-right-icons a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+    .top-right-icons .logo { width: 26px; height: 26px; image-rendering: pixelated; }
+    .tagline { margin-top: 6px; opacity: 0.9; }
+    .quick-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .quick-links a { text-decoration: none; }
+    .project { margin-top: 18px; }
+    .project-meta { opacity: 0.9; margin-top: 6px; }
+    .project-links a { display: inline-block; margin-right: 14px; }
+    .note { opacity: 0.85; font-size: 1.05rem; }
+    .hide-if-empty { display: none; }
+  </style>
 </head>
+
 <body>
 
-    <!-- Mock Login Screen -->
-    <div id="login-screen">
-        <div class="login-content">
-            <p>Login:</p>
-            <p id="password-mock"></p>
-        </div>
+  <!-- Mock Login Screen -->
+  <div id="login-screen">
+    <div class="login-content">
+      <p>Login:</p>
+      <p id="password-mock"></p>
     </div>
+  </div>
 
-    <!-- Loading Screen -->
-    <div id="loading-screen" style="display:none;">
-        <div class="typewriter">
-            <p>Loading: [Your Name] ePortfolio...</p>
-        </div>
+  <!-- Loading Screen -->
+  <div id="loading-screen" style="display:none;">
+    <div class="typewriter">
+      <p>Loading: 8bitfaz ePortfolio...</p>
     </div>
+  </div>
 
-    <!-- Glitch Screen -->
-    <div id="glitch-screen" style="display:none;">
-        <div class="glitch-text">
-            <p>*** SYSTEM ERROR ***</p>
-        </div>
+  <!-- Glitch Screen -->
+  <div id="glitch-screen" style="display:none;">
+    <div class="glitch-text">
+      <p>*** SYSTEM ERROR ***</p>
     </div>
+  </div>
 
-    <!-- Main Content after Glitch -->
-    <div id="main-content" style="display: none;">
-        <header>
-            <h1 id="name">[Your Name]</h1>
-            <p id="contact-info">
-                <a href="mailto:[your-email@example.com]" id="email" target="_blank">[your-email@example.com]</a>
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+    <header>
+      <h1 id="name">8bitfaz</h1>
+
+      <p class="tagline">
+        Digital producer • illustrator • comedian • weird internet explorer
+      </p>
+
+      <p id="contact-info" class="quick-links">
+        <a href="mailto:hello@8bitfaz.com" id="email" target="_blank">hello@8bitfaz.com</a>
+        <a href="https://instagram.com/8bitfaz" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@8bitfaz" target="_blank">YouTube</a>
+        <!-- Optional: add TikTok / other links -->
+        <!-- <a href="https://tiktok.com/@YOURHANDLE" target="_blank">TikTok</a> -->
+      </p>
+
+      <div class="top-right-icons">
+        <!-- Replace the icon URLs with your own or local images in /assets -->
+        <a href="https://instagram.com/8bitfaz" target="_blank" aria-label="Instagram">
+          <img src="assets/icons/instagram.png" alt="Instagram" class="logo">
+          <span>IG</span>
+        </a>
+
+        <a href="https://youtube.com/@8bitfaz" target="_blank" aria-label="YouTube">
+          <img src="assets/icons/youtube.png" alt="YouTube" class="logo">
+          <span>YT</span>
+        </a>
+
+        <!-- Optional: GitHub if you want it -->
+        <!--
+        <a href="https://github.com/YOURUSERNAME" target="_blank" aria-label="GitHub">
+          <img src="assets/icons/github.png" alt="GitHub" class="logo">
+          <span>GH</span>
+        </a>
+        -->
+
+        <!-- Dark/Light toggle if your template supports it -->
+        <div class="mode-switch">
+          <span class="light-mode-label">Dark</span>
+          <label class="switch">
+            <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+            <span class="slider round"></span>
+          </label>
+          <span class="dark-mode-label">Light</span>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-button">About</a></li>
+        <li><a href="#projects" class="nav-button">Projects</a></li>
+        <li><a href="#videos" class="nav-button">Videos</a></li>
+        <li><a href="#contact" class="nav-button">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- About -->
+      <section id="about">
+        <h2 class="section-header" style="display: inline-block;">About</h2>
+
+        <div class="about-container">
+          <div class="about-text">
+            <p>
+              I’m Faz. I make playful, culture-driven work across video, illustration, and internet storytelling.
+              My thing is mixing nostalgia with modern formats, then packaging it like a tiny digital experience.
             </p>
-            <div class="top-right-icons">
-                <a href="[Your Credly Profile URL]" target="_blank">
-                    <img src="[Your Credly Logo URL]" alt="Credly" class="logo">
-                </a>
-                <a href="[Your GitHub Profile URL]" target="_blank">
-                    <img src="[Your GitHub Logo URL]" alt="GitHub" class="logo">
-                </a>
-                <a href="[Your LinkedIn Profile URL]" target="_blank">
-                    <img src="[Your LinkedIn Logo URL]" alt="LinkedIn" class="logo">
-                </a>
-                <div class="mode-switch">
-                    <span class="light-mode-label">Dark</span>
-                    <label class="switch">
-                        <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="dark-mode-label">Light</span>
-                </div>
-            </div>
-        </header>
+            <p>
+              This site is a curated snapshot. If you want the full chaos, hit the socials.
+            </p>
 
-        <nav>
-            <ul>
-                <li><a href="#about" class="nav-button">About Me</a></li>
-                <li><a href="#certifications" class="nav-button">Certifications</a></li>
-                <li><a href="#projects" class="nav-button">Projects</a></li>
-                <li><a href="#resume" class="nav-button">Resume</a></li>
-                <li><a href="#community-resource" class="nav-button">Community Resource</a></li>
-                <li><a href="#contact" class="nav-button">Contact</a></li>
-            </ul>
-        </nav>
+            <p class="note">
+              Based in London. Available for collaborations, commissions, and brand work that fits the vibe.
+            </p>
+          </div>
 
-        <main>
-            <!-- About Section -->
-            <section id="about">
-                <h2 class="section-header" style="display: inline-block;">About Me</h2>
-                <div class="about-container">
-                    <div class="about-text">
-                        <p>Hi! I'm [Your Name], a full-stack developer passionate about efficient, secure, and automated solutions. I blend front-end design with back-end automation using tools like Azure, GitHub, and AI-driven APIs to build resilient, dynamic systems.</p>
-                        <p>This site showcases my approach: modular, clean code that's easy to maintain and scale. From CLI diagnostic tools to AI workflows, my projects focus on adaptability and real-world efficiency. My setup is fully automated—content updates flow to cloud storage and go live instantly, without manual tweaks.</p>
-                        <p>To streamline development, I leverage AI tools like OpenAI and GitHub Copilot to ensure each project is ready to make an impact.</p>
-                        <p>Explore my projects, check out my GitHub, and let’s connect—I'm actively seeking roles to make a difference with my skills. Let’s build something great together!</p>
-                    </div>
-                    <div class="about-photo">
-                        <img src="[Your Profile Image URL]" alt="Profile Image" class="profile-photo">
-                    </div>
-                </div>
-            </section>
+          <div class="about-photo">
+            <!-- Replace with your own image file, ideally stored locally -->
+            <img src="assets/profile.jpg" alt="Faz profile photo" class="profile-photo">
+          </div>
+        </div>
+      </section>
 
-            <!-- Certifications Section -->
-            <section id="certifications">
-                <h2 class="section-header" style="display: inline-block;">Certifications</h2>
-                <div class="certifications-gallery">
-                    <img src="[Your Certification Image URL 1]" alt="Certification 1" style="width: 150px; height: auto;">
-                    <img src="[Your Certification Image URL 2]" alt="Certification 2" style="width: 150px; height: auto;">
-                    <img src="[Your Certification Image URL 3]" alt="Certification 3" style="width: 150px; height: auto;">
-                </div>
-            </section>
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-header" style="display: inline-block;">Projects</h2>
 
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2 class="section-header" style="display: inline-block;">Projects</h2>
+        <div class="project">
+          <h3>🍱 Food I Can’t Read</h3>
+          <p class="project-meta">Short-form food reviews of products with labels I can’t read. Mostly comedy, sometimes genuinely good.</p>
+          <p class="project-links">
+            <a href="https://instagram.com/food.i.cant.read" target="_blank"><span class="project-link-symbol">></span> Watch on Instagram</a>
+            <!-- Optional: add a YouTube playlist link -->
+            <!-- <a href="https://youtube.com/playlist?list=XXXX" target="_blank"><span class="project-link-symbol">></span> YouTube playlist</a> -->
+          </p>
+        </div>
 
-                <!-- Project 1 -->
-                <div class="project">
-                    <h3><span class="project-header-icon">🔍</span> [Project Name]</h3>
-                    <div class="project-video">
-                        <video src="[Project Video URL]" controls>
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>[Project Description]</p>
-                    <p>
-                        <a href="[Project GitHub URL]" target="_blank"><span class="project-link-symbol">></span> View on GitHub</a><br>
-                        <a href="[Challenges URL]" class="project-link" target="_blank"><span class="project-link-symbol">></span> Challenges, Technology, Lessons Learned</a><br>
-                        <a href="[Download URL]" class="project-link" download><span class="project-link-symbol">></span> Download</a><br>
-                        <span class="project-link-symbol">></span> Checksums<br>
-                        SHA256=[Checksum]  [File Name]<br>
-                    </p>
-                </div>
+        <div class="project">
+          <h3>🕳️ Weird Things on the Internet</h3>
+          <p class="project-meta">A guided tour through the internet’s attic. Strange websites, odd tools, and delightful nonsense.</p>
+          <p class="project-links">
+            <!-- Replace with your actual link(s) -->
+            <a href="https://instagram.com/8bitfaz" target="_blank"><span class="project-link-symbol">></span> Episodes</a>
+          </p>
+        </div>
 
-                <!-- AI Agent Project -->
-                <div class="project">
-                    <h3>
-                        <img src="[AI Agent Logo URL]" alt="AI Agent Logo" class="project-header-icon" style="height: 4.725rem;">
-                        AI Agent
-                    </h3>
-                    <p>The AI Agent tackles critical Linux endpoint issues such as open ports, firewall rules, patch status, malware indicators, and more, delivering real-time insights with a touch of humor. It goes beyond conventional tools by providing engaging, actionable advice across eight key areas. Note: This tool is currently designed for Linux systems only, but we're working on cross-platform capabilities.</p>
-                    <p>Our vision is to make the AI lightweight enough for any endpoint, enabling a manager/agent setup for network-wide monitoring and real-time problem-solving. Future updates will bring SSH capabilities, more robust malware scanning, baseline monitoring, and AI-driven alerts.</p>
+        <div class="project">
+          <h3>🎨 Illustration + Art</h3>
+          <p class="project-meta">Commissioned illustration, editorial work, and personal pieces exploring identity, migration, and pop culture.</p>
+          <p class="project-links">
+            <!-- Replace with a gallery link if you have one -->
+            <a href="https://instagram.com/8bitfaz" target="_blank"><span class="project-link-symbol">></span> View work</a>
+          </p>
+        </div>
+      </section>
 
-                    <!-- AI Agent Photo Gallery -->
-                    <div class="flipping-gallery">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <a href="[AI Agent Analysis Image URL 1]" target="_blank">
-                                        <img src="[AI Agent Analysis Image URL 1]" alt="AI Agent Analysis" style="width:100%;height:100%;">
-                                    </a>
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="[AI Agent Analysis Image URL 2]" target="_blank">
-                                        <img src="[AI Agent Analysis Image URL 2]" alt="AI Agent Analysis 2" style="width:100%;height:100%;">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <a href="[AI Agent Code Image URL 1]" target="_blank">
-                                        <img src="[AI Agent Code Image URL 1]" alt="AI Agent Code" style="width:100%;height:100%;">
-                                    </a>
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="[AI Agent Code Image URL 2]" target="_blank">
-                                        <img src="[AI Agent Code Image URL 2]" alt="AI Analysis Code 2" style="width:100%;height:100%;">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Videos -->
+      <section id="videos">
+        <h2 class="section-header" style="display: inline-block;">Videos</h2>
 
-                    <p>
-                        <a href="[AI Agent GitHub URL]" target="_blank"><span class="project-link-symbol">></span> View on GitHub</a><br>
-                        <a href="[AI Agent Challenges URL]" class="project-link" target="_blank"><span class="project-link-symbol">></span> Challenges, Technology, Lessons Learned</a><br>
-                    </p>
-                </div>
-            </section>
+        <p class="note">Curated picks. More on YouTube / Instagram.</p>
 
-            <!-- Resume Section -->
-            <section id="resume">
-                <h2 class="section-header" style="display: inline-block;">Resume</h2>
-                <div class="resume-section" style="display: flex; align-items: center; gap: 20px; margin-top: 20px;">
-                    <a href="[Resume Image URL]" target="_blank">
-                        <img src="[Resume Image URL]" alt="Resume Preview" class="resume-photo">
-                    </a>
-                    <div class="resume-buttons">
-                        <a href="[Word Resume URL]" class="download-button" download>Download Word</a>
-                        <a href="[PDF Resume URL]" class="download-button" download>Download PDF</a>
-                    </div>
-                </div>
-            </section>
+        <!-- Best practice: embed YouTube videos instead of hosting mp4 files -->
+        <div class="project">
+          <h3>▶️ Featured video</h3>
+          <div class="project-video">
+            <iframe
+              width="100%"
+              height="360"
+              src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
+              title="8bitfaz video"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="project-meta">Replace the video ID above with your featured video.</p>
+        </div>
 
-            <!-- Contact Section -->
-            <section id="contact">
-                <h2 class="section-header" style="display: inline-block;">Contact</h2>
-                <ul class="contact-list" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                    <li>
-                        <a href="[Your GitHub Profile URL]" target="_blank">
-                            <img src="[GitHub Logo URL]" alt="GitHub" style="width: 30px; height: 30px; vertical-align: middle;"> GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="[Your LinkedIn Profile URL]" target="_blank">
-                            <img src="[LinkedIn Logo URL]" alt="LinkedIn" style="width: 30px; height: 30px; vertical-align: middle;"> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:[your-email@example.com]" target="_blank">
-                            <img src="[Email Logo URL]" alt="Email" style="width: 30px; height: 30px; vertical-align: middle;"> Email
-                        </a>
-                    </li>
-                    <li>
-                        <a href="[Your Credly Profile URL]" target="_blank">
-                            <img src="[Credly Logo URL]" alt="Credly" style="width: 30px; height: 30px; vertical-align: middle;"> Credly
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </main>
+        <div class="project">
+          <h3>▶️ Another good one</h3>
+          <div class="project-video">
+            <iframe
+              width="100%"
+              height="360"
+              src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_2"
+              title="8bitfaz video 2"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <p>&copy; [Current Year] [Your Name]. All rights reserved.</p>
-        </footer>
-    </div>
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="section-header" style="display: inline-block;">Contact</h2>
 
-    <!-- Link your main.js -->
-    <script src="js/main.js"></script>
+        <ul class="contact-list" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+          <li>
+            <a href="mailto:hello@8bitfaz.com" target="_blank">
+              <span class="project-link-symbol">></span> Email
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/8bitfaz" target="_blank">
+              <span class="project-link-symbol">></span> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@8bitfaz" target="_blank">
+              <span class="project-link-symbol">></span> YouTube
+            </a>
+          </li>
+          <!-- Optional -->
+          <!-- <li><a href="https://tiktok.com/@YOURHANDLE" target="_blank"><span class="project-link-symbol">></span> TikTok</a></li> -->
+        </ul>
+
+        <p class="note" style="text-align:center; margin-top: 16px;">
+          If you’re reaching out about a collab, tell me the vibe and the deadline. I respond faster to specifics.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> 8bitfaz. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Your template JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Tiny helper: auto year (won't break anything even if JS fails) -->
+  <script>
+    (function () {
+      var el = document.getElementById('year');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
-
-
